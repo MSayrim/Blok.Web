@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Blok.Core.Models
 {
-    internal class Category
+    public class Category
     {
+        public int ID { get; set; }
+        public string Title { get; set; }
+
     }
 }

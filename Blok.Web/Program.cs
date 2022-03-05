@@ -1,9 +1,16 @@
+using Blok.Core;
+using Blok.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddDistributedMemoryCache();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<BlogDBContext>(x => x.UseSqlServer(connectionString , x => x.MigrationsAssembly("Blok.Data")));
 
 builder.Services.AddSession(options =>
 {

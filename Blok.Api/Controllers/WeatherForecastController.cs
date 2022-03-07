@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
+using Swashbuckle.AspNetCore.Swagger;
 namespace Blok.Api.Controllers
 {
     [ApiController]

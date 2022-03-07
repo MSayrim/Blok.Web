@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Blok.Core\Blok.Core.csproj" />
     <ProjectReference Include="..\Blok.Data\Blok.Data.csproj" />
+    <ProjectReference Include="..\Blok.Services\Blok.Services.csproj" />
   </ItemGroup>
 
 </Project>
